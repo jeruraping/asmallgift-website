@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>dylm1</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+          button {
+            margin-top: 210px;
+            margin-right: 50px;
+            padding: 30px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: transparent;
+            box-shadow: 0 0 1em 0.25em var(--glow-color),
+                        0 0 4em 1em var(--glow-spread-color),
+                        inset 0 0 0.75em 0.25em var(--glow-color);
+            text-shadow: 0 0 0.5em var(--glow-color);
+            transition: all 0.3s;
+            position: relative;
+            outline: none;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-align: center;
+            flex-shrink: 0;
+            --glow-color: rgba(221, 224, 8, 0.637);
+            --glow-spread-color: rgba(221, 224, 8, 0.637);
+            --enhanced-glow-color: rgba(221, 224, 8, 0.637);
+            --btn-color: rgba(255, 215, 0, 0.75);
+            border: 0.25em solid var(--glow-color);
+          }
+          button:hover {
+            box-shadow: 0 0 1em 0.25em var(--glow-color),
+                        0 0 4em 2em var(--glow-spread-color),
+                        inset 0 0 0.75em 25em var(--glow-color);
+            transform: scale(1.05);
+            color: var(--btn-color);
+            background-color: var(--glow-color);
+            color:black;
+          }
+          .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+          }
+          button:active {
+            box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+            0 0 2.5em 2em var(--glow-spread-color),
+            inset 0 0 0.5em 0.25em var(--glow-color);
+          }
+          button:after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 120%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--glow-spread-color);
+            filter: blur(2em);
+            opacity: 0.7;
+            transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+          }
+          .pick {
+            margin-top: 100px;
+            margin-right: 50px;
+            padding: 30px 30px;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: transparent;
+            box-shadow: 0 0 1em 0.25em var(--glow-color),
+                        0 0 4em 1em var(--glow-spread-color),
+                        inset 0 0 0.75em 0.25em var(--glow-color);
+            text-shadow: 0 0 0.5em var(--glow-color);
+            transition: all 0.3s;
+            position: relative;
+            outline: none;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-align: center;
+            flex-shrink: 0;
+            --glow-color: rgba(0, 123, 255, 0.7);
+            --glow-spread-color: rgba(0, 123, 255, 0.7);
+            --enhanced-glow-color: rgba(0, 123, 255, 0.7);
+            --btn-color: rgba(0, 123, 255, 0.7);
+            border: 0.25em solid var(--glow-color);
+          }
+        
+        </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="bubbles">
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:24;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:23;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+          <span style="--i:22;"></span>
+          <span style="--i:25;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:21;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:26;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:28;"></span>
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:24;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:23;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+          <span style="--i:22;"></span>
+          <span style="--i:25;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:21;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:26;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:28;"></span>
+        </div>
+    </div>
+    <button class="pick">
+      Pick one of the small gifts
+    </button>
+          <div class="buttons">
+        <a href="il.htm">
+          <button class="love">I love</button>
+        </a>
+        <a href="ia.htm">
+          <button class="appreciate">I appreciate</button>
+        </a>
+        <a href="ih.htm">
+          <button class="hope">I hope</button>
+        </a>
+        <a href="is.htm">
+          <button class="sorry">I'm sorry</button>
+        </a>
+      </div>
+    <script>
+      window.alert("HELLO!");
+      window.alert("I really hope you'll like this small gift of mine!^^");
+    </script>
+  </body>
+</html>
